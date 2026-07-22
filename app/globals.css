@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 10% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 10% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 10% 12%;
+    --primary: 12 92% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 10% 12%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 45%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 224 10% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 12 92% 55%;
+    --radius: 0.5rem;
+    --important: 12 92% 55%;
+  }
+  .dark {
+    --background: 224 14% 8%;
+    --foreground: 220 14% 96%;
+    --card: 224 14% 10%;
+    --card-foreground: 220 14% 96%;
+    --popover: 224 14% 10%;
+    --popover-foreground: 220 14% 96%;
+    --primary: 12 92% 62%;
+    --primary-foreground: 224 14% 8%;
+    --secondary: 224 12% 14%;
+    --secondary-foreground: 220 14% 96%;
+    --muted: 224 12% 14%;
+    --muted-foreground: 220 10% 62%;
+    --accent: 224 12% 14%;
+    --accent-foreground: 220 14% 96%;
+    --border: 224 12% 18%;
+    --input: 224 12% 18%;
+    --ring: 12 92% 62%;
+    --important: 12 92% 62%;
+  }
+}
+
+@layer components {
+  .card-surface {
+    @apply rounded-lg border border-border bg-card text-card-foreground shadow-sm;
+  }
+  .important-glow {
+    box-shadow: 0 0 0 1px hsl(var(--important) / 0.4), 0 4px 20px hsl(var(--important) / 0.15);
+  }
+}
